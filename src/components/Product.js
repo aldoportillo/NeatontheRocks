@@ -2,12 +2,19 @@ import React from "react";
 
 
 function Product(props){
+
+    const productImgStyles = {
+        height: "300px",
+        width: "300px",
+    }
     return(
-        <div>
-            <h1>Product Rendered</h1>
-            <h1>{props.name}</h1>
-            <h2>{props.price}</h2>
-            <h3>{props.id}</h3>
+        <div className="product-box">
+            <img src={props.img} alt="" style={productImgStyles}/>
+            <div className="info">
+                <h1>{props.name}</h1>
+                <h2>{props.price}</h2>
+            </div>
+            
         </div>
     )
 }
