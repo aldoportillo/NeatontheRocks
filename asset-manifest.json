@@ -1,16 +1,22 @@
 {
   "files": {
-    "main.css": "/NeatontheRocks-ecommerce/static/css/main.073c9b0a.css",
-    "main.js": "/NeatontheRocks-ecommerce/static/js/main.c438fe44.js",
-    "static/js/787.3f14ece1.chunk.js": "/NeatontheRocks-ecommerce/static/js/787.3f14ece1.chunk.js",
-    "static/media/logo.svg": "/NeatontheRocks-ecommerce/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/NeatontheRocks-ecommerce/static/css/main.fc3a3d3d.css",
+    "main.js": "/NeatontheRocks-ecommerce/static/js/main.e27d9b3c.js",
+    "static/media/logo.png": "/NeatontheRocks-ecommerce/static/media/logo.fad474cdd8918782b186.png",
+    "static/media/book.jpeg": "/NeatontheRocks-ecommerce/static/media/book.02f76162635fad527432.jpeg",
+    "static/media/28oz-tin.webp": "/NeatontheRocks-ecommerce/static/media/28oz-tin.f73410fe911f4a0514b2.webp",
+    "static/media/mixing-glass.webp": "/NeatontheRocks-ecommerce/static/media/mixing-glass.3ba51658086186975078.webp",
+    "static/media/corkscrew.webp": "/NeatontheRocks-ecommerce/static/media/corkscrew.a721f3d01d4dd2fcef8b.webp",
+    "static/media/bar-spoon.webp": "/NeatontheRocks-ecommerce/static/media/bar-spoon.320d0abfe1bd8098c4a4.webp",
+    "static/media/beaker-jigger.webp": "/NeatontheRocks-ecommerce/static/media/beaker-jigger.694e69bf5bc4940b5d37.webp",
+    "static/media/peeler.webp": "/NeatontheRocks-ecommerce/static/media/peeler.d3fd4c36fc85200b2ee0.webp",
+    "static/media/18oz-tin.webp": "/NeatontheRocks-ecommerce/static/media/18oz-tin.8c33d9585463f032a92d.webp",
     "index.html": "/NeatontheRocks-ecommerce/index.html",
-    "main.073c9b0a.css.map": "/NeatontheRocks-ecommerce/static/css/main.073c9b0a.css.map",
-    "main.c438fe44.js.map": "/NeatontheRocks-ecommerce/static/js/main.c438fe44.js.map",
-    "787.3f14ece1.chunk.js.map": "/NeatontheRocks-ecommerce/static/js/787.3f14ece1.chunk.js.map"
+    "main.fc3a3d3d.css.map": "/NeatontheRocks-ecommerce/static/css/main.fc3a3d3d.css.map",
+    "main.e27d9b3c.js.map": "/NeatontheRocks-ecommerce/static/js/main.e27d9b3c.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.c438fe44.js"
+    "static/css/main.fc3a3d3d.css",
+    "static/js/main.e27d9b3c.js"
   ]
 }
