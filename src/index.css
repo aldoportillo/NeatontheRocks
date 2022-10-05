@@ -18,10 +18,11 @@ body{
 .header > .title{
   display: flex;
   align-items: center;
+  gap: 10px;
   
 }
 .header > div > img {
-  max-height: 8rem;
+  max-height: 5rem;
 }
 
 nav{
