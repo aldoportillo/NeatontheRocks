@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/NeatontheRocks-ecommerce/static/css/main.fc3a3d3d.css",
-    "main.js": "/NeatontheRocks-ecommerce/static/js/main.e27d9b3c.js",
-    "static/media/logo.png": "/NeatontheRocks-ecommerce/static/media/logo.fad474cdd8918782b186.png",
+    "main.css": "/NeatontheRocks-ecommerce/static/css/main.8167eda0.css",
+    "main.js": "/NeatontheRocks-ecommerce/static/js/main.aae10e04.js",
+    "static/media/logo.png": "/NeatontheRocks-ecommerce/static/media/logo.fe2d44b7afdc3dd4204f.png",
     "static/media/book.jpeg": "/NeatontheRocks-ecommerce/static/media/book.02f76162635fad527432.jpeg",
     "static/media/28oz-tin.webp": "/NeatontheRocks-ecommerce/static/media/28oz-tin.f73410fe911f4a0514b2.webp",
     "static/media/mixing-glass.webp": "/NeatontheRocks-ecommerce/static/media/mixing-glass.3ba51658086186975078.webp",
@@ -12,11 +12,11 @@
     "static/media/peeler.webp": "/NeatontheRocks-ecommerce/static/media/peeler.d3fd4c36fc85200b2ee0.webp",
     "static/media/18oz-tin.webp": "/NeatontheRocks-ecommerce/static/media/18oz-tin.8c33d9585463f032a92d.webp",
     "index.html": "/NeatontheRocks-ecommerce/index.html",
-    "main.fc3a3d3d.css.map": "/NeatontheRocks-ecommerce/static/css/main.fc3a3d3d.css.map",
-    "main.e27d9b3c.js.map": "/NeatontheRocks-ecommerce/static/js/main.e27d9b3c.js.map"
+    "main.8167eda0.css.map": "/NeatontheRocks-ecommerce/static/css/main.8167eda0.css.map",
+    "main.aae10e04.js.map": "/NeatontheRocks-ecommerce/static/js/main.aae10e04.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc3a3d3d.css",
-    "static/js/main.e27d9b3c.js"
+    "static/css/main.8167eda0.css",
+    "static/js/main.aae10e04.js"
   ]
 }

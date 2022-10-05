@@ -1,2 +1,0 @@
-*{--darkmode:#36393f;--header:#23272a;text-decoration:none}body{background-color:var(--darkmode)}.header{background-color:var(--header);justify-content:space-between;max-height:10vh}.header,.header>.title{align-items:center;display:flex}.header>div>img{max-height:8rem}nav{align-items:center;color:#faebd7;display:flex;gap:10px;justify-content:space-around}h1,h3{color:#fff}.product-container{display:grid;grid-template-columns:1fr 1fr 1fr 1fr}.product-box{align-items:center;display:flex;flex-direction:column;justify-content:center}
-/*# sourceMappingURL=main.fc3a3d3d.css.map*/
