@@ -7,5 +7,5 @@ export const productData = [
     {id: 5, name: "Corkscrew", price: 12.58, isFavorited: false, description: "", img: require('./tools/corkscrew.webp')},
     {id: 6, name: "Mixing Glass", price: 11.95, isFavorited: false, description: "", img: require('./tools/mixing-glass.webp')},
     {id: 7, name: "Peeler", price: 3.99, isFavorited: false, description: "", img: require('./tools/peeler.webp')},
-    {id: 7, name: "Liquid Intelegence", price: 99.99, isFavorited: false, description: "", img: require('./tools/book.jpeg')},
+    {id: 8, name: "Liquid Intelegence", price: 99.99, isFavorited: false, description: "", img: require('./tools/book.jpeg')},
 ]

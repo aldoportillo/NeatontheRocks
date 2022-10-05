@@ -29,9 +29,8 @@ function ContextProvider({children}) {
         })
     }
 
-    console.log(cart)
     return(
-        <Context.Provider value={{allItems, toggleFavorite, addToCart}}>
+        <Context.Provider value={{allItems, toggleFavorite, addToCart, cart}}>
             {children}
         </Context.Provider>
     )
