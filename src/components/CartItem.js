@@ -17,6 +17,8 @@ function CartItem ({item}) {
                 <h2>{item.price.toLocaleString("en-US", {style: "currency", currency: "USD"})}</h2>
             </div>
             
+            
+            
         </div>
     )
 }
