@@ -3,7 +3,8 @@ import { Context } from '../context/context'
 import CartItem from '../components/CartItem'
 
  function Cart () {
-    const {cart} = React.useContext(Context)
+    const {cart, clearCart} = React.useContext(Context)
+    const [orderButton, setOrderButton] = React.useState('Place Order')
 
     const cartItemElements = cart?.map(item => (
         <CartItem key={item.id} item={item} />
@@ -17,8 +18,20 @@ import CartItem from '../components/CartItem'
         return total.toLocaleString("en-US", {style: "currency", currency: "USD"})
     }
 
+
+    function placeOrder() {
+        setOrderButton("Ordering ...")
+        setTimeout(()=>{
+            setOrderButton("Place Order")
+            clearCart()
+            alert('order placed')
+        }, "3000")
+    }
+
     return (
         <div className='cart-page'>
+            {cart.length > 0 ? 
+            <>
             <div className='cart-header'>Cart</div>
             <div className='cart-items'>
                 {cartItemElements}
@@ -26,8 +39,11 @@ import CartItem from '../components/CartItem'
             <div className='pricing'>
                 <h1>Checkout</h1>
                 <h2>Total: {getTotal(cart)}</h2>
-                <button>Place Order</button>
+                <button onClick={placeOrder}>{orderButton}</button>
             </div>
+                </> : 
+            <div className='cart-header'>Your cart is empty</div>}
+            
             
         </div>
     )
