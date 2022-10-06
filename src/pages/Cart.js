@@ -5,14 +5,17 @@ import CartItem from '../components/CartItem'
  function Cart () {
     const {cart} = React.useContext(Context)
 
-    console.log(cart)
     const cartItemElements = cart?.map(item => (
-        <CartItem key={item.id} name={item.name}/>
+        <CartItem key={item.id} item={item} />
     ))
 
     return (
         <div className='cart-page'>
-            {cartItemElements}
+            <div className='cart-header'>Cart</div>
+            <div className='cart-items'>
+                {cartItemElements}
+            </div>
+            
         </div>
     )
 }

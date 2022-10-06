@@ -7,7 +7,7 @@ export default function Products () {
 
     const renderProducts = allItems.map(product => {
         return(
-            <Product key={product.id} name={product.name} price={product.price} img={product.img}/>
+            <Product key={product.id} item={product}/>
         )
     })
     return (
