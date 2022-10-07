@@ -6,6 +6,14 @@ const Context = React.createContext()
 function ContextProvider({children}) {
     const [allItems, setAllItems] = React.useState(productData)
     const [cart, setCart] = React.useState([])
+    const [nutrition, setNutrition] = React.useState({
+        calories: 200,
+        fat: 6,
+        carbs: 7,
+        protein: 3,
+        sugar: 2,
+        ethanol: 4,
+    })
 
     function toggleFavorite(id) {
         const updatedArr = allItems.map(item => {
@@ -38,7 +46,7 @@ function ContextProvider({children}) {
 
 
     return(
-        <Context.Provider value={{allItems, toggleFavorite, addToCart, removeFromCart, cart, clearCart}}>
+        <Context.Provider value={{allItems, toggleFavorite, addToCart, removeFromCart, cart, clearCart, nutrition}}>
             {children}
         </Context.Provider>
     )
