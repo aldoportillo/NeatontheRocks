@@ -12,10 +12,6 @@ export default function Macro () {
 
     const [cocktail, setCocktail] = React.useState([])
     const [forms, setForms] = React.useState([1])
-
-    console.log(cocktail);
-    console.log(getMacros(cocktail, alcoholData))
-
     function addForm() {
         setForms([...forms, 1])
     }
@@ -30,9 +26,9 @@ export default function Macro () {
                 {renderForms}
             </div>
             
-            {/* <div className='nutrition-label'>
-               <NutritionLabel item={nutrition}/>
-            </div> */}
+            <div className='nutrition-label'>
+               <NutritionLabel item={getMacros(cocktail, alcoholData)}/>
+            </div> 
 
         </div>
     )
