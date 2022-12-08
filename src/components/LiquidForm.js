@@ -10,7 +10,6 @@ export default function LiquidForm({title, addForm, cocktail, setCocktail}) {
 
     function handleSubmit(e) {
         e.preventDefault()
-        addForm()
         setCocktail([...cocktail, {name: e.target.liquid.value, ounces: e.target.ounces.value}])
     }
   return (
@@ -20,7 +19,7 @@ export default function LiquidForm({title, addForm, cocktail, setCocktail}) {
         <select name="liquid">
             {renderOptions}
         </select>
-        <input name="ounces" placeholder='Please Enter Amount in OZ'/>
+        <input name="ounces" type="number" placeholder='ounces'/>
         <button type='submit'>Add Liquid</button>
     </form>
     </>
