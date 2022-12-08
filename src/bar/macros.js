@@ -1,5 +1,5 @@
 export const getMacros = (arr, arr2) => {
-  console.log("you got this")
+  
   const macros ={
     fat: 0,
     carb: 0,
