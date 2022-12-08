@@ -16,10 +16,10 @@ export default function LiquidForm({title, addForm, cocktail, setCocktail}) {
     <>
     <h3>Liquid {title}</h3>
     <form onSubmit={handleSubmit}>
-        <select name="liquid">
+        <select name="liquid" required>
             {renderOptions}
         </select>
-        <input name="ounces" type="number" placeholder='ounces' />
+        <input name="ounces" type="number" placeholder='ounces' required/>
         <button type='submit'>Add Liquid</button>
     </form>
     </>
