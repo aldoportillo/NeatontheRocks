@@ -4,7 +4,7 @@ import { alcoholData } from '../bar/alcoholData'
 export default function LiquidForm({title, addForm, cocktail, setCocktail}) {
 
   const renderOptions = alcoholData.map(liquid => {
-    return <option value={liquid.name}>{liquid.name}</option>
+    return <option key={liquid.id} value={liquid.name}>{liquid.name}</option>
   })
 
   function handleSubmit(e) {
