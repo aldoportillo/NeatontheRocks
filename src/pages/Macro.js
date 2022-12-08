@@ -5,6 +5,7 @@ import NutritionLabel from '../components/NutritionLabel'
 import { Context } from '../context/context'
 import { alcoholData } from '../bar/alcoholData'
 import SpecList from '../components/SpecList'
+import { nanoid } from 'nanoid'
 
 
 export default function Macro () {
@@ -14,7 +15,7 @@ export default function Macro () {
     const [cocktail, setCocktail] = React.useState([])
 
    const renderSpecList = cocktail.map(item => {
-    return <SpecList name={item.name} ounces={item.ounces} />
+    return <SpecList key={nanoid()} name={item.name} ounces={item.ounces} />
    })
     return (
         <div className='nutrition-page'> 
