@@ -8,14 +8,17 @@ export default function Macro () {
 
     const {nutrition} = React.useContext(Context)
 
+    const [cocktail, setCocktail] = React.useState([])
     const [forms, setForms] = React.useState([1])
+
+    console.log(cocktail);
 
     function addForm() {
         setForms([...forms, 1])
     }
 
     const renderForms = forms.map(form => {
-        return  <LiquidForm title={form} addForm={addForm}/>
+        return  <LiquidForm title={form} addForm={addForm} setCocktail={setCocktail} cocktail={cocktail}/>
     })
    
     return (

@@ -1,8 +1,9 @@
 import React from 'react'
 import { alcoholData } from '../bar/alcoholData'
 
-export default function LiquidForm({title, addForm}) {
+export default function LiquidForm({title, addForm, cocktail, setCocktail}) {
 
+    
      const renderOptions = alcoholData.map(liquid => {
         return <option value={liquid.name}>{liquid.name}</option>
     })
@@ -12,6 +13,7 @@ export default function LiquidForm({title, addForm}) {
         addForm()
         console.log(e.target.liquid.value)
         console.log(e.target.ounces.value)
+        setCocktail([...cocktail, {name: e.target.liquid.value, ounces: e.target.ounces.value}])
     }
   return (
     <>
