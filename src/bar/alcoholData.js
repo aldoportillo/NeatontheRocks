@@ -1,6 +1,7 @@
 
 const alcoholData = [
     {
+        id: 'L01',
         name: 'vodka',
         fat: 0,
         carb: 0,
@@ -12,6 +13,7 @@ const alcoholData = [
         ethanol: 9.14,
     },
     {
+        id: 'L02',
         name: 'rum',
         id: 3,
         fat: 0,
@@ -24,6 +26,7 @@ const alcoholData = [
         ethanol: 9.14,
     },
     {  
+        id: 'L03',
         name: 'gin',
         fat: 0,
         carb: 0,
@@ -35,6 +38,7 @@ const alcoholData = [
         ethanol: 9.14,
     },
     {
+        id: 'L04',
         name: 'tequila',
         fat: 0,
         carb: 0,
@@ -46,6 +50,7 @@ const alcoholData = [
         ethanol: 9.14,
     },
     {
+        id: 'L05',
         name: 'whiskey',
         fat: 0,
         carb: 0.3,
@@ -57,6 +62,7 @@ const alcoholData = [
         ethanol: 10,
     },
     {
+        id: 'C01',
         name: 'triple sec',
         fat: 0,
         carb: 7,
@@ -68,6 +74,7 @@ const alcoholData = [
         ethanol: 9.5,
     },
     {
+        id: 'J01',
         name: 'lime',
         fat: 0,
         carb: 2.6,
@@ -77,6 +84,7 @@ const alcoholData = [
         calories: 10.4,
     },
     {
+        id: 'J02',
         name: 'lemon',
         fat: 0,
         carb: 2.6,
@@ -86,6 +94,7 @@ const alcoholData = [
         calories: 10.4,
     },
     {
+        id: 'J03',
         name: 'cranberry',
         fat: 0.03,
         carb: 4.27,
@@ -95,6 +104,7 @@ const alcoholData = [
         calories: 17,
     },
     {
+        id: 'J04',
         name: 'pineapple',
         fat: 0.04,
         carb: 4.02,
@@ -104,6 +114,7 @@ const alcoholData = [
         calories: 17,
     },
     {
+        id: 'J05',
         name: 'orange',
         fat: 0.06,
         carb: 3.22,
@@ -113,6 +124,7 @@ const alcoholData = [
         calories: 14,
     },
     {
+        id: 'S01',
         name: 'simple',
         fat: 0,
         carb: 0,
