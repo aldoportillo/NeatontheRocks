@@ -8,6 +8,8 @@ body{
   background-color: var(--darkmode);
 }
 
+/*For Header */
+
 .header{
   display: flex;
   justify-content: space-between;
@@ -37,6 +39,7 @@ h1, h3{
   color: #ffffff;
 }
 
+/*For Products Page */
 .product-container{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -49,11 +52,58 @@ h1, h3{
   justify-content: center;
 }
 
+/*For Cart Page */
+
+.cart-page{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.cart-header{
+  color: white;
+  font-size: 3rem;
+}
+
+.cart-items{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: antiquewhite;
+}
+
+.cart-item > .left-page > img{
+  width: 250px;
+}
+
+.cart-item-info > h1 {
+  color: black;
+}
+
+.pricing > h2 {
+  color: #ffffff;
+}
+
+@media only screen and (min-width:1025px) {
+
+  .cart-item{
+    padding: 3rem;
+  }
+  .cart-items{
+    width: 80vw;
+  }
+}
 
 /*Start Nutrition Facts CSS */
 
 .nutrition-page{
-  background-color: red;
+  background-color: white;
 }
 .image {
   width: 250px;
