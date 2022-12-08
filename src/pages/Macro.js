@@ -15,14 +15,13 @@ export default function Macro () {
     }
 
     const renderForms = forms.map(form => {
-        return  <LiquidForm title={form} />
+        return  <LiquidForm title={form} addForm={addForm}/>
     })
    
     return (
         <div className='nutrition-page'> 
             <div className='form'>
                 {renderForms}
-                <button onClick={()=> addForm()}>Add New Liquid</button>
             </div>
             
             {/* <div className='nutrition-label'>
