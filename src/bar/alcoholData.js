@@ -15,7 +15,6 @@ const alcoholData = [
     {
         id: 'L02',
         name: 'rum',
-        id: 3,
         fat: 0,
         carb: 0,
         sugar: 0,
