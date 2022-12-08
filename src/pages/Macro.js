@@ -13,9 +13,8 @@ export default function Macro () {
     const [cocktail, setCocktail] = React.useState([])
     const [forms, setForms] = React.useState([1])
 
-    const array = [{name: 'vodka', ounces: '2'}, {name: 'simple', ounces: '2'}, {name: 'triple sec', ounces: '2'}]
     console.log(cocktail);
-    console.log(getMacros(array, alcoholData))
+    console.log(getMacros(cocktail, alcoholData))
 
     function addForm() {
         setForms([...forms, 1])
