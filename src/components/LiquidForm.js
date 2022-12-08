@@ -1,25 +1,27 @@
 import React from 'react'
-import { arrLiquids } from '../bar/alcoholData'
+import { alcoholData } from '../bar/alcoholData'
 
 export default function LiquidForm({title, addForm}) {
 
-     const renderOptions = arrLiquids.map(liquid => {
+     const renderOptions = alcoholData.map(liquid => {
         return <option value={liquid.name}>{liquid.name}</option>
     })
 
     function handleSubmit(e) {
         e.preventDefault()
         addForm()
+        console.log(e.target.liquid.value)
+        console.log(e.target.ounces.value)
     }
   return (
     <>
     <h3>Liquid {title}</h3>
-    <form>
+    <form onSubmit={handleSubmit}>
         <select name="liquid">
             {renderOptions}
         </select>
-        <input placeholder='Please Enter Amount in OZ'/>
-        <button onClick={handleSubmit}>Add Liquid</button>
+        <input name="ounces" placeholder='Please Enter Amount in OZ'/>
+        <button type='submit'>Add Liquid</button>
     </form>
     </>
   )
