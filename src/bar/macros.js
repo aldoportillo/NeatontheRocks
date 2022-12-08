@@ -19,6 +19,7 @@ export const getMacros = (arr, arr2) => {
         macros.sugar += item.ounces * item2.sugar
         macros.carb += item.ounces * item2.carb
         macros.fat += item.ounces * item2.fat
+        macros.ethanol += item.ounces * item2.ethanol
       }
       return null
 
@@ -30,5 +31,3 @@ export const getMacros = (arr, arr2) => {
   
 
 }
-
-
