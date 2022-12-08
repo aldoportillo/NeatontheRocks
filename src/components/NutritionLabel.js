@@ -6,6 +6,7 @@ function NutritionLabel ({item}) {
             <h2>Calories: {item.calories}</h2>
             <h2>Carbs: {item.carbs}</h2>
             <h2>Sugar: {item.sugar}</h2>
+            <h2>AddedSugar: {item.addedSugar}</h2>
             <h2>Fat: {item.fat}</h2>
             <h2>Ethanol: {item.ethanol}</h2>
             <h2>Protein: {item.protein}</h2>
