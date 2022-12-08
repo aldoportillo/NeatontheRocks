@@ -11,8 +11,6 @@ export default function LiquidForm({title, addForm, cocktail, setCocktail}) {
     function handleSubmit(e) {
         e.preventDefault()
         addForm()
-        console.log(e.target.liquid.value)
-        console.log(e.target.ounces.value)
         setCocktail([...cocktail, {name: e.target.liquid.value, ounces: e.target.ounces.value}])
     }
   return (
