@@ -23,6 +23,10 @@ export default function Macro () {
             <LiquidForm setCocktail={setCocktail} cocktail={cocktail}/>
             </div>
             <div className='spec-list-container'>
+                <div className='spec-list thead'>
+                    <h2>Ingedients</h2>
+                    <h3>Amount</h3>
+                </div>
                 {renderSpecList}
             </div>
             <div className='nutrition-label'>
