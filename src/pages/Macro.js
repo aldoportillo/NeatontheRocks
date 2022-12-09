@@ -28,6 +28,7 @@ export default function Macro () {
                     <h3>Amount</h3>
                 </div>
                 {renderSpecList}
+                <button onClick={() => setCocktail([])}>Clear Drink</button>
             </div>
             <div className='nutrition-label'>
                <NutritionLabel item={getMacros(cocktail, alcoholData)}/>
