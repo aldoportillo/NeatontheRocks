@@ -163,7 +163,7 @@ const alcoholData = [
         
     },
     {
-        id: 'C07',
+        id: 'C08',
         name: 'jagermeister',
         ethanol: 8,
         calories: 74,
@@ -176,7 +176,7 @@ const alcoholData = [
         
     },
     {
-        id: 'C07',
+        id: 'C09',
         name: 'midori',
         ethanol: 4.67,
         calories: 74,
