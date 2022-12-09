@@ -4,7 +4,7 @@ function NutritionLabel ({item}) {
     return(
         <div className="label-container">
             <h2>Calories: {item.calories}</h2>
-            <h2>Carbs: {item.carbs}</h2>
+            <h2>Carbs: {item.carb}</h2>
             <h2>Sugar: {item.sugar}</h2>
             <h2>AddedSugar: {item.addedSugar}</h2>
             <h2>Fat: {item.fat}</h2>
