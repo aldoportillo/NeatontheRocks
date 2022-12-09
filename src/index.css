@@ -40,6 +40,44 @@ h1, h3{
   color: #ffffff;
 }
 
+/*Home Page */
+
+.home-page{
+  color: white;
+}
+
+.home-page > .paragraph > .text-content > h2{
+  font-size: 2rem;
+  color: rgba(244, 154, 115, 0.855);
+}
+
+.home-page > .paragraph > .text-content > p{
+  font-size: 1.2rem;
+}
+
+.home-page > .paragraph >img{
+  width: 85vw;
+  padding-left: 10vw;
+}
+
+@media only screen and (min-width:1025px) {
+
+  .home-page{
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 5vw;;
+  }
+  .paragraph{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-page > .paragraph >img{
+    width: 50vw;
+  }
+
+}
 /*For Products Page */
 .product-container{
   display: grid;
