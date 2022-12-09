@@ -107,6 +107,7 @@ h1, h3{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 .nutrition-page > .form {
@@ -124,31 +125,29 @@ h1, h3{
 }
 .spec-list{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
-.spec-list-container {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  width: 40vw;
-}
-
-.spec-list-container > button{
-  width: 30vw;
-}
 
 
 
 
 @media only screen and (min-width:1025px) {
 
-  .nutrition-page{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 2fr, 5fr;
+  .left-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
+  .nutrition-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 3vw;
+  }
+
 }
 
 /*Start Nutrition Facts CSS */

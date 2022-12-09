@@ -19,16 +19,18 @@ export default function Macro () {
    })
     return (
         <div className='nutrition-page'> 
-            <div className='form'>
-            <LiquidForm setCocktail={setCocktail} cocktail={cocktail}/>
-            </div>
-            <div className='spec-list-container'>
-                <div className='spec-list thead'>
-                    <h2>Ingedients</h2>
-                    <h3>Amount</h3>
+            <div className='left-page'>
+                <div className='form'>
+                <LiquidForm setCocktail={setCocktail} cocktail={cocktail}/>
                 </div>
-                {renderSpecList}
-                <button onClick={() => setCocktail([])}>Clear Drink</button>
+                <div className='spec-list-container'>
+                    <div className='spec-list thead'>
+                        <h2>Ingedients</h2>
+                        <h3>Amount</h3>
+                    </div>
+                    {renderSpecList}
+                    <button onClick={() => setCocktail([])}>Clear Drink</button>
+                </div>
             </div>
             <div className='nutrition-label'>
                <NutritionLabel item={getMacros(cocktail, alcoholData)}/>
