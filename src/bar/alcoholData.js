@@ -81,6 +81,7 @@ const alcoholData = [
         addedSugar: 0,
         protein: 0.1,
         calories: 10.4,
+        ethanol: 0,
     },
     {
         id: 'J02',
@@ -91,6 +92,7 @@ const alcoholData = [
         addedSugar: 0,
         protein: 0,
         calories: 10.4,
+        ethanol: 0,
     },
     {
         id: 'J03',
@@ -101,6 +103,7 @@ const alcoholData = [
         addedSugar: 3.75,
         protein: 0,
         calories: 17,
+        ethanol: 0,
     },
     {
         id: 'J04',
@@ -111,6 +114,7 @@ const alcoholData = [
         addedSugar: 0,
         protein: 0,
         calories: 17,
+        ethanol: 0,
     },
     {
         id: 'J05',
@@ -121,6 +125,7 @@ const alcoholData = [
         addedSugar: 0,
         protein: 0,
         calories: 14,
+        ethanol: 0,
     },
     {
         id: 'S01',
@@ -131,6 +136,7 @@ const alcoholData = [
         addedSugar: 13,
         protein: 0,
         calories: 52,
+        ethanol: 0,
     },
 ]
 export {alcoholData}
