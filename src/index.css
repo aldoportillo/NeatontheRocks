@@ -100,6 +100,18 @@ h1, h3{
   }
 }
 
+/*For Macro Page */
+
+.spec-list{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.spec-list > h3{
+  color: #36393f;
+}
+
 /*Start Nutrition Facts CSS */
 
 .nutrition-page{
