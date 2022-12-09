@@ -119,13 +119,27 @@ h1, h3{
 
 .spec-list-container {
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 .spec-list{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 80vw;
 }
+
+.spec-list-container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+}
+
+.spec-list-container > button{
+  width: 30vw;
+}
+
+
 
 
 @media only screen and (min-width:1025px) {
