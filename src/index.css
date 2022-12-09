@@ -2,6 +2,7 @@
   --darkmode: #36393f;
   text-decoration: none;
   --header: #23272a;
+  box-sizing: border-box;
 }
 
 body{
@@ -42,7 +43,8 @@ h1, h3{
 /*For Products Page */
 .product-container{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 4vw;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
 }
 
 .product-box{
