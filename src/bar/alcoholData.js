@@ -131,7 +131,7 @@ const alcoholData = [
         id: 'S01',
         name: 'simple',
         fat: 0,
-        carb: 0,
+        carb: 13,
         sugar: 13,
         addedSugar: 13,
         protein: 0,
