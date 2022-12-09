@@ -15,7 +15,7 @@ export default function Macro () {
     const [cocktail, setCocktail] = React.useState([])
 
    const renderSpecList = cocktail.map(item => {
-    return <SpecList key={nanoid()} name={item.name} ounces={item.ounces} />
+    return <SpecList key={nanoid()} name={item.name} ounces={item.ounces} cocktail={cocktail} setCocktail={setCocktail}/>
    })
     return (
         <div className='nutrition-page'> 
