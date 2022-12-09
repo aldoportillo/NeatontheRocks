@@ -10,8 +10,12 @@
 
 ### Products that will be for sale
 
-- Shaker Tins 
-- Hawthorne Strainers 
-- Etc 
+- Shaker Tins
+- Hawthorne Strainers
+- Etc
 
-[Active Page](https://aldoportillo.github.io/NeatontheRocks-ecommerce/)
+### Updates
+
+- December 8, 2022: Finally implemented cocktail macro tracker
+
+[Active Page](https://www.neatonthe.rocks/macro)
