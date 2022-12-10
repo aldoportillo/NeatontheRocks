@@ -106,18 +106,20 @@ h1, h3{
 @media only screen and (min-width:1025px) {
 
   .home-page{
-    padding-left: 10vw;
-    padding-right: 10vw;
-    padding-top: 5vw;;
+    padding-top: 3vw;;
   }
   .paragraph{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
 
   .home-page > .paragraph >img{
-    width: 50vw;
+    width: 35vw;
+  }
+
+  .home-page > .paragraph > .text-content {
+    width: 35vw;
   }
 
 }
