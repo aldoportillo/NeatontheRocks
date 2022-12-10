@@ -31,8 +31,7 @@ export default function PageContainer({children}) {
   React.useEffect(() => {
     setOpenNav(false)
   },[loaction])
-  
-  console.log(windowSize)
+
   return (
     <>
         <Header setOpenNav={setOpenNav} openNav={openNav} windowSize={windowSize}/>
