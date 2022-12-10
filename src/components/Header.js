@@ -6,13 +6,17 @@ import { Spin as Hamburger } from 'hamburger-react'
 export default function Header ({setOpenNav, openNav, windowSize}) {
     return (
         <div className='header'>
+            <div className='top-nav'>
             <div className='title'>
                 <img require src={require('../media/logo.png')} alt=""/> 
                 <Link to="/"><h1>Neat on the Rocks</h1></Link>
             </div>
 
             {windowSize > 1025 ? <NavMenu /> : <Hamburger toggled={openNav} toggle={setOpenNav} size={25} direction="left" duration={0.4} color="white" easing="ease-in"/>}
-
+            </div>
+            <div className='dropdown-nav'>
+                {openNav && windowSize < 1025 && <NavMenu />}
+            </div>
         </div>
         
         

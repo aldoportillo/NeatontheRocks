@@ -1,7 +1,6 @@
 import React from 'react'
 import Footer from './Footer'
 import Header from './Header'
-import NavMenu from './NavMenu'
 
 const getWindowSize = () => {
     const {innerWidth} = window;
@@ -30,7 +29,6 @@ export default function PageContainer({children}) {
   return (
     <>
         <Header setOpenNav={setOpenNav} openNav={openNav} windowSize={windowSize}/>
-        {openNav && windowSize < 1025 && <NavMenu />}
         {children}
         <Footer />
     </>
