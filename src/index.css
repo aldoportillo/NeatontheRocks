@@ -3,6 +3,7 @@
   text-decoration: none;
   --header: #23272a;
   box-sizing: border-box;
+  --whiskey: rgba(244, 154, 115, 0.855);
 }
 
 body{
@@ -58,7 +59,7 @@ h1, h3{
 
 .home-page > .paragraph > .text-content > h2{
   font-size: 2rem;
-  color: rgba(244, 154, 115, 0.855);
+  color: var(--whiskey);
 }
 
 .home-page > .paragraph > .text-content > p{
@@ -266,6 +267,37 @@ h1, h3{
 
 .footer {
   align-self: center;
-  background-color: black;
+  background-color: var(--header);
   width: 100vw;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  bottom:0;
+  padding-top: 1rem;
 }
+.footer-rows{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+
+.footer-rows >a:link{
+  color: #ffffff;
+}
+
+.footer-rows > a:visited{
+  color: #ffffff;
+}
+
+.footer-rows > a:hover {
+  color: var(--whiskey);
+}
+
+/* selected link */
+.footer-rows > a:active {
+  color: white;
+}
+
+
