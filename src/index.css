@@ -86,6 +86,8 @@ h1, h3{
 
 .home-page{
   color: white;
+  align-self: center;
+  width: 80vw;
 }
 
 .home-page > .paragraph > .text-content > h2{
@@ -98,8 +100,7 @@ h1, h3{
 }
 
 .home-page > .paragraph >img{
-  width: 85vw;
-  padding-left: 10vw;
+  width: 80vw;
 }
 
 @media only screen and (min-width:1025px) {
