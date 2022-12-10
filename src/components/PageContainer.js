@@ -3,9 +3,29 @@ import Footer from './Footer'
 import Header from './Header'
 import NavMenu from './NavMenu'
 
+const getWindowSize = () => {
+    const {innerWidth} = window;
+    console.log(innerWidth)
+    return innerWidth
+}
+
 export default function PageContainer({children}) {
 
   const [openNav, setOpenNav] = React.useState(false)
+
+  const [windowSize, setWindowSize] = React.useState(getWindowSize())
+
+  React.useEffect(() => {
+    function handleResize() {
+      setWindowSize(getWindowSize())
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
   
   return (
     <>
