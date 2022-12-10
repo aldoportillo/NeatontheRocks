@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from './Footer'
 import Header from './Header'
+import { useLocation } from 'react-router-dom'
 
 const getWindowSize = () => {
     const {innerWidth} = window;
@@ -8,6 +9,8 @@ const getWindowSize = () => {
 }
 
 export default function PageContainer({children}) {
+
+  const loaction  = useLocation()
 
   const [openNav, setOpenNav] = React.useState(false)
 
@@ -24,6 +27,10 @@ export default function PageContainer({children}) {
       window.removeEventListener('resize', handleResize)
     }
   }, [])
+
+  React.useEffect(() => {
+    setOpenNav(false)
+  },[loaction])
   
   console.log(windowSize)
   return (
