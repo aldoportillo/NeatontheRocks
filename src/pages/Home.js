@@ -6,7 +6,7 @@ export default function Home () {
             <div className='paragraph'>
                 <div className='text-content'>
                 <h2>Prohibition and the FDA</h2>
-                    <p>In 1935, The Alcohol Administration Act <i>(now the TTB)</i> was created to generate tax revenue from alcohol after the end of Prohibition. <i>(1920-1935)</i> The TBB was also responsible for regulating alcohol labels.</p>
+                    <p>In 1935, The Alcohol Administration Act <i>(now the TTB)</i> was created to generate tax revenue from alcohol after the end of Prohibition. <i>(1920-1935)</i> The TTB was also responsible for regulating alcohol labels.</p>
                     <p>A problem arose in 1990, the FDA required mandatory Nutrition Facts labels. Unfortunately, alcohol was regulated by the TTB, so alcohol was exempt. The only requirement for alcohol was to display their alcohol percentage.</p>
                  </div>
                 <img src={require('../bar/cocktails/hazelnutOldFashioned.jpg')} alt="hazelnut old fashioned" />
