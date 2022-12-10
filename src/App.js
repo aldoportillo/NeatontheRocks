@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
 import Macro from "./pages/Macro";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -17,7 +18,10 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/macro" element={<Macro />} />
       </Routes>
+
+      <Footer />
     </div>
+    
   );
 }
 
