@@ -7,6 +7,14 @@
 
 body{
   background-color: var(--darkmode);
+  position: relative;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
 }
 
 /*For Header */
@@ -17,6 +25,8 @@ body{
   align-items: center;
   max-height: 10vh;
   background-color: var(--header);
+  align-self: center;
+  width: 100vw;
 }
 .header > .title{
   display: flex;
@@ -249,4 +259,13 @@ h1, h3{
   .spec-list{
     width: 25vw;
   }
+}
+
+
+/*For Footer*/
+
+.footer {
+  align-self: center;
+  background-color: black;
+  width: 100vw;
 }
