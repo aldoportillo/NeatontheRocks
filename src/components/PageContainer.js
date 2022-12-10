@@ -5,7 +5,6 @@ import NavMenu from './NavMenu'
 
 const getWindowSize = () => {
     const {innerWidth} = window;
-    console.log(innerWidth)
     return innerWidth
 }
 
@@ -27,10 +26,11 @@ export default function PageContainer({children}) {
     }
   }, [])
   
+  console.log(windowSize)
   return (
     <>
-        <Header setOpenNav={setOpenNav} openNav={openNav}/>
-        {openNav && <NavMenu />}
+        <Header setOpenNav={setOpenNav} openNav={openNav} windowSize={windowSize}/>
+        {openNav && windowSize < 1025 && <NavMenu />}
         {children}
         <Footer />
     </>
