@@ -1,20 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import NavMenu from './NavMenu'
 
-export default function Header () {
+export default function Header ({setOpenNav, openNav}) {
     return (
         <div className='header'>
             <div className='title'>
                 <img require src={require('../media/logo.png')} alt=""/> 
                 <Link to="/"><h1>Neat on the Rocks</h1></Link>
             </div>
-            
-            <nav>
-                <Link to="/macro"><h3>Nutrition</h3></Link>
-                <Link to="/products"><h3>Products</h3></Link>
-                <Link to="/cart"><h3>Cart</h3></Link>
-            </nav>
-            
+            <h1 onClick={() => setOpenNav(!openNav)}>x</h1>
+            <NavMenu />
         </div>
         
         
