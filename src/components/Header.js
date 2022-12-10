@@ -1,16 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import NavMenu from './NavMenu'
+import { Spin as Hamburger } from 'hamburger-react'
 
-export default function Header ({setOpenNav, openNav}) {
+export default function Header ({setOpenNav, openNav, windowSize}) {
     return (
         <div className='header'>
             <div className='title'>
                 <img require src={require('../media/logo.png')} alt=""/> 
                 <Link to="/"><h1>Neat on the Rocks</h1></Link>
             </div>
-            <h1 onClick={() => setOpenNav(!openNav)}>x</h1>
-            <NavMenu />
+
+            {windowSize > 1025 ? <NavMenu /> : <Hamburger toggled={openNav} toggle={setOpenNav} size={25} direction="left" duration={0.4} color="white" easing="ease-in"/>}
+
         </div>
         
         
