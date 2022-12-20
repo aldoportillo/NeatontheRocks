@@ -10,16 +10,12 @@ export default function Cocktails() {
         axios.get(`http://192.168.0.206:5000/api/cocktails`)
       .then(res => {
         const cocktailData = res.data;
-        
         setCocktailData(cocktailData)
-        console.log(cocktailData)
       })
     }, [])
 
     const renderCocktails = cocktailData.map(cocktail => {
         const {name, _id} = cocktail
-
-        console.log(cocktail)
         return (
             <div key={_id} className='cocktail-card'>
                 <Link to={`/cocktail/${_id}`} state={{ from: "cocktail", data: cocktail}}>

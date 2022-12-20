@@ -1,13 +1,10 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
-export default function Cocktail(props) {
+export default function Cocktail() {
 
     const location = useLocation()
     const { data } = location.state
-
-    console.log("From cocktail page")
-    console.log(data);
 
     const {name, specs, instructions, description, image, macros} = data;
 
