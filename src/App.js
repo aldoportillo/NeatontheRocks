@@ -5,6 +5,7 @@ import Cart from "./pages/Cart";
 import Macro from "./pages/Macro";
 import PageContainer from "./components/PageContainer";
 import Cocktails from "./pages/Cocktails";
+import Cocktail from "./pages/Cocktail";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/cart" element={<PageContainer children={<Cart />}/>} />
         <Route path="/macro" element={<PageContainer children={<Macro />}/>} />
         <Route path="/cocktails" element={<PageContainer children={<Cocktails />} />} />
+        <Route path="/cocktail/:id" element={<PageContainer children={<Cocktail />} />} />
       </Routes>
     </div>
     
