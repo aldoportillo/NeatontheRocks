@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 export default function Cocktail(props) {
 
@@ -25,6 +25,7 @@ export default function Cocktail(props) {
         <ul>{renderSpecList}</ul>
         <ol>{renderInstructions}</ol>
         <h5>{description}</h5> 
+        <Link to="/cocktails"><button>Back to Cocktails</button></Link>
     </div>
   )
 }
