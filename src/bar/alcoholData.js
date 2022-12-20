@@ -188,6 +188,19 @@ const alcoholData = [
         proof: 40,
         
     },
+    {
+        id: 'C10',
+        name: 'grand marnier',
+        ethanol: 9,
+        calories: 76,
+        fat: 0,
+        carb: 10,
+        sugar: 2,
+        addedSugar: 2,
+        protein: 0,
+        proof: 80,
+        
+    },
 
     {
         id: 'J01',
