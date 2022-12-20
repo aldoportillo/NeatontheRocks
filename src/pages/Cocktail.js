@@ -11,12 +11,15 @@ export default function Cocktail(props) {
 
     const {name, specs, instructions, description, image} = data;
 
-    const renderSpecList = specs.map(liquid => { //Remember to take in account bitters and any odd ball add condtional if has dashes if has ounces
-        return <li> <h4>{liquid.spirit}</h4> <h5>{liquid.ounces}</h5> OZ </li> //For ounces
+    const renderSpecList = specs.map(liquid => { 
+        if(liquid.dashes) {
+            return <li> <h4>{liquid.spirit}</h4> <h5>{liquid.dashes}</h5> dashes </li>
+        }
+        return <li> <h4>{liquid.spirit}</h4> <h5>{liquid.ounces}</h5> OZ </li>
     })
 
-    const renderInstructions = instructions.map(step => { //Remember to take in account bitters and any odd ball add condtional if has dashes if has ounces
-        return <li> <h4>{step} </h4></li> //For ounces
+    const renderInstructions = instructions.map(step => { 
+        return <li> <h4>{step} </h4></li> 
     })
   return (
     <div className='cocktail-page'>
