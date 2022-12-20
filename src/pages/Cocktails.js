@@ -15,12 +15,12 @@ export default function Cocktails() {
     }, [])
 
     const renderCocktails = cocktailData.map(cocktail => {
-        const {name, _id} = cocktail
+        const {name, _id, image} = cocktail
         return (
             <div key={_id} className='cocktail-card'>
                 <Link to={`/cocktail/${_id}`} state={{ from: "cocktail", data: cocktail}}>
                     <h3>{name}</h3>
-
+                    <img src={image.filePath} alt="" />
                 </Link>
             </div>
         )
