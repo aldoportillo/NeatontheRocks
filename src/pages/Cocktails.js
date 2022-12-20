@@ -7,7 +7,7 @@ export default function Cocktails() {
     const [cocktailData, setCocktailData] = React.useState([])
 
     React.useEffect(( ) => {
-        axios.get(`http://localhost:5000/api/cocktails`)
+        axios.get(`http://192.168.0.206:5000/api/cocktails`)
       .then(res => {
         const cocktailData = res.data;
         
@@ -21,9 +21,10 @@ export default function Cocktails() {
 
         console.log(cocktail)
         return (
-            <div className='cocktail-card'>
+            <div key={_id} className='cocktail-card'>
                 <Link to={`/cocktail/${_id}`} state={{ from: "cocktail", data: cocktail}}>
                     <h3>{name}</h3>
+
                 </Link>
             </div>
         )

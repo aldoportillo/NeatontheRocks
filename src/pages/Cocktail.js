@@ -9,7 +9,7 @@ export default function Cocktail(props) {
     console.log("From cocktail page")
     console.log(data);
 
-    const {name, specs, instructions, description} = data;
+    const {name, specs, instructions, description, image} = data;
 
     const renderSpecList = specs.map(liquid => { //Remember to take in account bitters and any odd ball add condtional if has dashes if has ounces
         return <li> <h4>{liquid.spirit}</h4> <h5>{liquid.ounces}</h5> OZ </li> //For ounces
@@ -21,7 +21,7 @@ export default function Cocktail(props) {
   return (
     <div className='cocktail-page'>
         <h2>{name}</h2>
-        <div className='img'></div>
+        <img src={image.filePath} alt="" />
         <ul>{renderSpecList}</ul>
         <ol>{renderInstructions}</ol>
         <h5>{description}</h5> 
