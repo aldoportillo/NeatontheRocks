@@ -35,6 +35,7 @@ export default function Cocktails() {
     // The Following Code is Actually for the Cocktail page component
     <div className='cocktail-page'>
         <h2>{name}</h2>
+        <div className='img'></div>
         <ul>{renderSpecList}</ul>
         <ol>{renderInstructions}</ol>
         <h5>{description}</h5>
