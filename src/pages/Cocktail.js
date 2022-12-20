@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom'
 export default function Cocktail(props) {
 
     const location = useLocation()
-    const { from, data } = location.state
+    const { data } = location.state
 
     console.log("From cocktail page")
     console.log(data);
