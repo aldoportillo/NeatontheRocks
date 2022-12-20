@@ -19,9 +19,10 @@ export default function Cocktails() {
     const renderCocktails = cocktailData.map(cocktail => {
         const {name, _id} = cocktail
 
+        console.log(cocktail)
         return (
             <div className='cocktail-card'>
-                <Link to={`/cocktail/${_id}`}>
+                <Link to={`/cocktail/${_id}`} state={{ from: "cocktail", data: cocktail}}>
                     <h3>{name}</h3>
                 </Link>
             </div>
