@@ -1,6 +1,7 @@
 import React from 'react'
 import { Context } from '../context/context'
 import Product from '../components/Product'
+import { Link } from 'react-router-dom'
 
 export default function Products () {
     const {allItems} = React.useContext(Context)
@@ -17,6 +18,8 @@ export default function Products () {
             <div className='product-container'>
                 {renderProducts}
             </div>
+
+            <Link to="/cart"><button>Go to Cart</button></Link>
         </div>
     )
 }
