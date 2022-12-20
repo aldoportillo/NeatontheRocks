@@ -350,6 +350,7 @@ h1, h3{
 
   .cocktail-page{
     align-self: center;
+    flex-direction: row;
     gap: 30px;
   }
 
