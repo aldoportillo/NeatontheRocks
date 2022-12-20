@@ -247,6 +247,7 @@ h1, h3{
 /*Start Nutrition Facts CSS */
 
 .label-container{
+  color: black;
   background-color: white;
   width: 80vw;
   border: 3px solid black;
@@ -304,6 +305,92 @@ h1, h3{
     width: 25vw;
   }
 }
+
+/*For Cocktails Page*/
+
+.cocktails-page{
+  align-self: center;
+}
+
+/*For Cocktail Page*/
+
+.cocktail-page{
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.cocktail-left-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cocktail-left-page >img{
+  width: 90vw;
+}
+
+.cocktail-left-page > .spec-list{
+  flex-direction: column;
+  
+}
+
+.cocktail-left-page > .spec-list > ul {
+  padding: 0;
+  list-style: none;
+}
+
+.cocktail-left-page > .spec-list > ul > li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+}
+@media only screen and (min-width:1025px) {
+
+  .cocktail-page{
+    align-self: center;
+    gap: 30px;
+  }
+
+  .cocktail-left-page{
+    width: 40vw;
+  }
+
+  .cocktail-left-page > h2 {
+    font-size: 1.8rem;
+    width: 40vw;
+    align-self: flex-start;
+  }
+  
+  .cocktail-left-page >img{
+    width: 40vw;
+  }
+  
+  .cocktail-left-page > .spec-list > ul > li{
+    width: 30vw;
+  }
+  
+  
+  .cocktail-right-page{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+  
+  .cocktail-right-page > .description >h5{
+    font-size: 1rem;
+    font-weight: 400;
+    width: 35vw;
+  }
+}
+
+.cocktail-right-page > .nutrition-label {
+  align-self: center;
+}
+
+
 
 
 /*For Footer*/
