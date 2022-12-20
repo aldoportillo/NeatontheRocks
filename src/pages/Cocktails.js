@@ -7,7 +7,7 @@ export default function Cocktails() {
     const [cocktailData, setCocktailData] = React.useState([])
 
     React.useEffect(( ) => {
-        axios.get(`http://192.168.0.206:5000/api/cocktails`)
+        axios.get(process.env.BACKEND_URL)
       .then(res => {
         const cocktailData = res.data;
         setCocktailData(cocktailData)
