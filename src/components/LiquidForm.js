@@ -1,10 +1,9 @@
 import React from 'react'
-import { alcoholData } from '../bar/alcoholData'
 
-export default function LiquidForm({title, addForm, cocktail, setCocktail}) {
+export default function LiquidForm({title, cocktail, setCocktail,spiritData}) {
 
-  const renderOptions = alcoholData.map(liquid => {
-    return <option key={liquid.id} value={liquid.name}>{liquid.name}</option>
+  const renderOptions = spiritData.map(liquid => {
+    return <option key={liquid._id} value={liquid.name}>{liquid.name}</option>
   })
 
   function handleSubmit(e) {
