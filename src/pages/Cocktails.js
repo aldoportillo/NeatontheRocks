@@ -2,17 +2,9 @@ import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-export default function Cocktails() {
+export default function Cocktails({cocktailData}) {
 
-    const [cocktailData, setCocktailData] = React.useState([])
-
-    React.useEffect(( ) => {
-        axios.get(`https://neatontherocks-server.onrender.com/api/cocktails`)
-      .then(res => {
-        const cocktailData = res.data;
-        setCocktailData(cocktailData)
-      })
-    }, [])
+    
 
     const renderCocktails = cocktailData.map(cocktail => {
         const {name, _id, image} = cocktail
