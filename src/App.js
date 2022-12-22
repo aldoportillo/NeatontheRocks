@@ -6,9 +6,23 @@ import Macro from "./pages/Macro";
 import PageContainer from "./components/PageContainer";
 import Cocktails from "./pages/Cocktails";
 import Cocktail from "./pages/Cocktail";
+import React from "react";
+import axios from "axios";
 
 
 function App() {
+
+  const [cocktailData, setCocktailData] = React.useState([])
+
+    React.useEffect(( ) => {
+        axios.get(`https://neatontherocks-server.onrender.com/api/cocktails`)
+      .then(res => {
+        const cocktailData = res.data;
+        setCocktailData(cocktailData)
+      })
+    }, [])
+
+
   return (
     <div className="App">
       <Routes>
@@ -16,7 +30,7 @@ function App() {
         <Route path="/products" element={<PageContainer children={<Products />}/>} />
         <Route path="/cart" element={<PageContainer children={<Cart />}/>} />
         <Route path="/macro" element={<PageContainer children={<Macro />}/>} />
-        <Route path="/cocktails" element={<PageContainer children={<Cocktails />} />} />
+        <Route path="/cocktails" element={<PageContainer children={<Cocktails cocktailData={cocktailData}/>} />} />
         <Route path="/cocktail/:id" element={<PageContainer children={<Cocktail />} />} />
       </Routes>
     </div>
