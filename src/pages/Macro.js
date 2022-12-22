@@ -1,16 +1,12 @@
 import React from 'react'
-import { getMacros } from '../bar/macros'
 import LiquidForm from '../components/LiquidForm'
 import NutritionLabel from '../components/NutritionLabel'
-import { Context } from '../context/context'
-import { alcoholData } from '../bar/alcoholData'
 import SpecList from '../components/SpecList'
 import { nanoid } from 'nanoid'
+import { getMacros } from '../bar/macros'
 
 
-export default function Macro () {
-
-    const {nutrition} = React.useContext(Context)
+export default function Macro ({spiritData}) {
 
     const [cocktail, setCocktail] = React.useState([])
 
@@ -21,7 +17,7 @@ export default function Macro () {
         <div className='nutrition-page'> 
             <div className='left-page'>
                 <div className='form'>
-                <LiquidForm setCocktail={setCocktail} cocktail={cocktail}/>
+                <LiquidForm setCocktail={setCocktail} cocktail={cocktail} spiritData={spiritData}/>
                 </div>
                 <div className='spec-list-container'>
                     <div className='spec-list thead'>
@@ -33,7 +29,7 @@ export default function Macro () {
                 </div>
             </div>
             <div className='nutrition-label'>
-               <NutritionLabel item={getMacros(cocktail, alcoholData)}/>
+               <NutritionLabel item={getMacros(cocktail, spiritData)}/>
             </div> 
 
         </div>
