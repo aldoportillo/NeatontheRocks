@@ -8,6 +8,7 @@ import Cocktails from "./pages/Cocktails";
 import Cocktail from "./pages/Cocktail";
 import React from "react";
 import axios from "axios";
+import Product from "./pages/Product";
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<PageContainer children={<Home />}/>} />
         <Route path="/products" element={<PageContainer children={<Products />}/>} />
+        <Route path="/products/:id" element={<PageContainer children={<Product />} />} />
         <Route path="/cart" element={<PageContainer children={<Cart />}/>} />
         <Route path="/macro" element={<PageContainer children={<Macro spiritData={spiritData}/>}/>} />
         <Route path="/cocktails" element={<PageContainer children={<Cocktails cocktailData={cocktailData}/>} />} />
