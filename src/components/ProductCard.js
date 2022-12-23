@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {Context} from '../context/context'
 
-function Product({item}){
+function ProductCard({item}){
 
 
     const productImgStyles = {
@@ -19,6 +20,7 @@ function Product({item}){
                 
                 <button onClick={()=>addToCart(item)}>Add to Cart</button>
                 <button onClick={()=>removeFromCart(item.id)}>Remove from Cart</button>
+                <Link to={`/products/${item.id}`} state={{ from: "/products", data: item }}> <button>View Item</button></Link>
                 <button onClick={()=> console.log(item)}>OKOKO</button>
             </div>
             
@@ -28,4 +30,4 @@ function Product({item}){
     
 }
 
-export default Product
+export default ProductCard
