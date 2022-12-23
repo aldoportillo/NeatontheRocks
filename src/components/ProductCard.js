@@ -19,7 +19,7 @@ function ProductCard({item}){
                 <h4> &#36; {item.price}</h4>
                 <div className="product-box-buttons">
                     <button onClick={()=>addToCart(item)}>Add to Cart</button>
-                    <Link to={`/products/${item.id}`} state={{ from: "/products", data: item }}> <button>View Item</button></Link>
+                    <Link to={`/products/${item._id}`} state={{ from: "/products", data: item }}> <button>View Item</button></Link>
                 </div>
             </div>
             
