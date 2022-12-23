@@ -17,7 +17,7 @@ export default function Products () {
                 {renderProducts}
             </div>
 
-            <Link to="/cart"><button>Go to Cart</button></Link>
+            <Link to="/cart"><button className="--whiskey-btn">Go to Cart</button></Link>
         </div>
     )
 }
