@@ -1,19 +1,21 @@
+import axios from "axios";
 import React from "react";
-import { productData } from "../products/productData";
 
 const Context = React.createContext()
+    
 
 function ContextProvider({children}) {
-    const [allItems, setAllItems] = React.useState(productData)
+    const [allItems, setAllItems] = React.useState()
     const [cart, setCart] = React.useState([])
-    const [nutrition, setNutrition] = React.useState({
-        calories: 200,
-        fat: 6,
-        carbs: 7,
-        protein: 3,
-        sugar: 2,
-        ethanol: 4,
-    })
+
+    React.useEffect(() => {
+        axios
+            .get('http://localhost:5000/api/products')
+            .then(res => {
+            const productData = res.data;
+                setAllItems(productData)
+            })
+    },[])
 
     function toggleFavorite(id) {
         const updatedArr = allItems.map(item => {
@@ -46,7 +48,7 @@ function ContextProvider({children}) {
 
 
     return(
-        <Context.Provider value={{allItems, toggleFavorite, addToCart, removeFromCart, cart, clearCart, nutrition}}>
+        <Context.Provider value={{allItems, toggleFavorite, addToCart, removeFromCart, cart, clearCart}}>
             {children}
         </Context.Provider>
     )
