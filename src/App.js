@@ -24,7 +24,7 @@ function App() {
             setCocktailData(cocktailData)
           })
         axios
-          .get('http://localhost:5000/api/spirits')
+          .get('https://neatontherocks-server.onrender.com/api/spirits')
           .then(res => {
             const spiritData = res.data;
             setSpiritData(spiritData)
