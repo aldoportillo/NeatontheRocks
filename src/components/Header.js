@@ -8,7 +8,7 @@ export default function Header ({setOpenNav, openNav, windowSize}) {
         <div className='header'>
             <div className='top-nav'>
             <div className='title'>
-                <img require src={require('../media/logo.png')} alt=""/> 
+                <img require src={require('../assets/logo.png')} alt=""/> 
                 <Link to="/"><h1>Neat on the Rocks</h1></Link>
             </div>
 
