@@ -59,7 +59,7 @@ export default function Cocktail() {
             <div className="thick1"></div>
         </div>
             </div>
-            <Link to="/cocktails"><button>Back to Cocktails</button></Link>
+            <Link to="/cocktails"><button className='--whiskey-btn'>Back to Cocktails</button></Link>
         </div>
     </div>
   )
