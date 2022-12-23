@@ -169,7 +169,7 @@ h1, h3{
   font-size: larger;
 }
 
-.product-box > .info > .product-box-buttons > button {
+.--btn-white{
   padding: 15px 25px;
   border: unset;
   border-radius: 15px;
@@ -186,7 +186,7 @@ h1, h3{
   margin: 5px;
 }
 
-.product-box > .info > .product-box-buttons > button::before {
+.--btn-white::before {
   content: "";
   position: absolute;
   top: 0;
@@ -201,18 +201,18 @@ h1, h3{
   transition: all 250ms
 }
 
-.product-box > .info > .product-box-buttons > button:hover {
+.--btn-white:hover {
   color: #e8e8e8;
 }
 
-.product-box > .info > .product-box-buttons > button:hover::before {
+.--btn-white:hover::before {
   width: 100%;
 }
 
 
 
 
-.product-box > .info > .product-box-buttons > a > button{
+.--btn-black{
   padding: 15px 25px;
   border: unset;
   border-radius: 15px;
@@ -229,7 +229,7 @@ h1, h3{
   margin: 5px;
 }
 
-.product-box > .info > .product-box-buttons > a>  button::before {
+.--btn-black::before {
   content: "";
   position: absolute;
   top: 0;
@@ -244,11 +244,11 @@ h1, h3{
   transition: all 250ms
 }
 
-.product-box > .info > .product-box-buttons > a > button:hover {
+.--btn-black:hover {
   color: #36393f;
 }
 
-.product-box > .info > .product-box-buttons > a > button:hover::before {
+.--btn-black:hover::before {
   width: 100%;
 }
 
@@ -310,6 +310,33 @@ h1, h3{
   }
 }
 
+/*For Product Page*/
+
+.product-page{
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  color: white
+}
+
+.product-page > .product-left-page >img {
+  width: 90vw;
+}
+
+@media only screen and (min-width:1025px) {
+
+  .product-page{
+    flex-direction: row;
+    gap: 10vw;
+  }
+
+  .product-page > .product-left-page >img {
+    width: 45vw;
+  }
+}
 /*For Cart Page */
 
 .cart-page{
