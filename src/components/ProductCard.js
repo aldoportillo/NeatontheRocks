@@ -9,7 +9,7 @@ function ProductCard({item}){
         height: "300px",
         width: "300px",
     }
-    const {addToCart, removeFromCart} = React.useContext(Context)
+    const {addToCart} = React.useContext(Context)
 
     return(
         <div className="product-box">
@@ -19,9 +19,7 @@ function ProductCard({item}){
                 <h2>{item.price}</h2>
                 
                 <button onClick={()=>addToCart(item)}>Add to Cart</button>
-                <button onClick={()=>removeFromCart(item.id)}>Remove from Cart</button>
                 <Link to={`/products/${item.id}`} state={{ from: "/products", data: item }}> <button>View Item</button></Link>
-                <button onClick={()=> console.log(item)}>OKOKO</button>
             </div>
             
         </div>
