@@ -131,13 +131,13 @@ h1, h3{
   align-items: center;
   justify-content: center;
 }
+
 .product-container{
-  display: grid;
-  gap: 4vw;
-  grid-template-columns: repeat( auto-fit, minmax(250px, 300px) );
-  align-self: center;
-  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 
 .product-box{
   display: flex;
@@ -146,11 +146,12 @@ h1, h3{
   justify-content: center;
   background-color: #838383;
   border-radius: 15px;
+  margin: 5px;
   
 }
 
 .product-box > img{
-  width: 250px;
+  width: 292px;
   border-radius: 15px;
 }
 
@@ -328,6 +329,14 @@ h1, h3{
 
 @media only screen and (min-width:1025px) {
 
+  .product-container{
+    display: grid;
+    gap: 4vw;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 300px) );
+    align-self: center;
+    width: 90vw;
+  }
+  
   .product-page{
     flex-direction: row;
     gap: 10vw;

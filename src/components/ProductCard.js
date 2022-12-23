@@ -4,16 +4,11 @@ import {Context} from '../context/context'
 
 function ProductCard({item}){
 
-
-    const productImgStyles = {
-        height: "300px",
-        width: "300px",
-    }
     const {addToCart} = React.useContext(Context)
 
     return(
         <div className="product-box">
-            <img src={item.img.mainImage} alt="" style={productImgStyles}/>
+            <img src={item.img.mainImage} alt="" />
             <div className="info">
                 <h3>{item.name}</h3>
                 <h4> &#36; {item.price}</h4>
