@@ -39,7 +39,7 @@ function ContextProvider({children}) {
         })
     }
     function removeFromCart (id){
-        setCart(prevItems => prevItems.filter(item => item.id !== id))
+        setCart(prevItems => prevItems.filter(item => item._id !== id))
     }
 
     function clearCart () {
