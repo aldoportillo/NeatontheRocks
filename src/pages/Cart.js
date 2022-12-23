@@ -7,7 +7,10 @@ import CartItem from '../components/CartItem'
     const [orderButton, setOrderButton] = React.useState('Place Order')
 
     const cartItemElements = cart?.map(item => (
+        <>
         <CartItem key={item.id} item={item} />
+        <hr className='--white-divide'/>
+        </>
     ))
 
     function getTotal (arr) {
@@ -39,7 +42,7 @@ import CartItem from '../components/CartItem'
             <div className='pricing'>
                 <h1>Checkout</h1>
                 <h2>Total: {getTotal(cart)}</h2>
-                <button onClick={placeOrder}>{orderButton}</button>
+                <button onClick={placeOrder} className="--whiskey-btn">{orderButton}</button>
             </div>
                 </> : 
             <div className='cart-header'>Your cart is empty</div>}

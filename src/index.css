@@ -253,7 +253,7 @@ h1, h3{
   width: 100%;
 }
 
-.products-page > a >button{
+.--whiskey-btn{
   height: 3em;
   width: 8em;
   margin: 20px;
@@ -266,7 +266,7 @@ h1, h3{
 
 }
 
-.products-page > a >button:hover{
+.--whiskey-btnhover{
   animation: shake3856 0.3s linear infinite both;
 }
 
@@ -347,51 +347,56 @@ h1, h3{
   }
 }
 /*For Cart Page */
-
 .cart-page{
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  color: white;
 }
+
 .cart-header{
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .cart-items{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
+  align-self: center;
+  width: 90vw;
 }
 
-.cart-item {
+.cart-items > .cart-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: antiquewhite;
+  justify-content: space-between;
+}
+.cart-items > .cart-item > .left-page > img {
+  width: 20vw;
+}
+.cart-items > .cart-item > .right-page {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.cart-item > .left-page > img{
-  width: 250px;
+.x {
+  color: red;
 }
 
-.cart-item-info > h1 {
-  color: black;
+.--white-divide{
+  width: 90vw;
 }
 
-.pricing > h2 {
-  color: #ffffff;
+.pricing{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 @media only screen and (min-width:1025px) {
 
-  .cart-item{
-    padding: 3rem;
-  }
-  .cart-items{
-    width: 80vw;
-  }
+  
 }
 
 /*For Macro Page */

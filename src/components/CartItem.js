@@ -4,17 +4,21 @@ import { Context } from '../context/context'
 function CartItem ({item}) {
 
     const {removeFromCart} = React.useContext(Context)
+    console.log(item)
     return(
         <div className='cart-item'>
             <div className='left-page'>
-                <img src={item.img} alt="" />
+                <img src={item.img.mainImage} alt="" />
                 <div className='cart-item-info'>
-                    <h1>{item.name}</h1>
-                    <i onClick={()=>removeFromCart(item.id)}>Remove from Cart</i>
+                    
+                    
                 </div>
             </div>
             <div className='right-page'>
-                <h2>{item.price.toLocaleString("en-US", {style: "currency", currency: "USD"})}</h2>
+                <div className='x' onClick={()=>removeFromCart(item.id)}>X</div>
+                <h3>{item.name}</h3>
+                <h4>{item.price.toLocaleString("en-US", {style: "currency", currency: "USD"})}</h4>
+
             </div>
             
             
