@@ -13,8 +13,13 @@ export default function Macro ({spiritData}) {
    const renderSpecList = cocktail.map(item => {
     return <SpecList key={nanoid()} name={item.name} ounces={item.ounces} />
    })
+
+   React.useEffect(() => {
+    console.log("rerender")
+   },[spiritData])
     return (
-        <div className='nutrition-page'> 
+        <>
+        {spiritData ? <div className='nutrition-page'> 
             <div className='left-page'>
                 <div className='form'>
                 <LiquidForm setCocktail={setCocktail} cocktail={cocktail} spiritData={spiritData}/>
@@ -32,6 +37,7 @@ export default function Macro ({spiritData}) {
                <NutritionLabel item={getMacros(cocktail, spiritData)}/>
             </div> 
 
-        </div>
+        </div> : <img src={require("../assets/loading.gif")} alt=""/>}
+        </>
     )
 }

@@ -11,13 +11,23 @@ export default function Products () {
             <ProductCard key={product.id} item={product}/>
         )
     })
+
+    React.useEffect(() => {
+        console.log("rerender")
+       },[allItems])
+
     return (
         <div className='products-page'>
+            {allItems ?  
+            <>
             <div className='product-container'>
                 {renderProducts}
             </div>
 
             <Link to="/cart"><button className="--whiskey-btn">Go to Cart</button></Link>
+            </>
+            : <img src={require("../assets/loading.gif")} alt=""/>}
+            
         </div>
     )
 }
