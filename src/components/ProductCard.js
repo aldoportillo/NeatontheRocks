@@ -13,7 +13,7 @@ function ProductCard({item}){
 
     return(
         <div className="product-box">
-            <img src={item.img} alt="" style={productImgStyles}/>
+            <img src={item.img.mainImage} alt="" style={productImgStyles}/>
             <div className="info">
                 <h1>{item.name}</h1>
                 <h2>{item.price}</h2>
