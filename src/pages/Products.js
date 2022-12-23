@@ -1,6 +1,6 @@
 import React from 'react'
 import { Context } from '../context/context'
-import Product from '../components/Product'
+import ProductCard from '../components/ProductCard'
 import { Link } from 'react-router-dom'
 
 export default function Products () {
@@ -8,7 +8,7 @@ export default function Products () {
 
     const renderProducts = allItems.map(product => {
         return(
-            <Product key={product.id} item={product}/>
+            <ProductCard key={product.id} item={product}/>
         )
     })
     return (
