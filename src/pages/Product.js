@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocation, useParams } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 
 
 export default function Product() {
@@ -16,6 +16,7 @@ export default function Product() {
         <h3>{price}</h3>
         <h3>{description}</h3>
         <h3>{isFavorited}</h3>
+        <Link to="/products" ><button>Back to Products</button></Link>
     </div>
     
   )
