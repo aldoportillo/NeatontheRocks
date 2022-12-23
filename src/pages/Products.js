@@ -13,8 +13,6 @@ export default function Products () {
     })
     return (
         <div className='products-page'>
-            <h3>Check out all our products</h3>
-            
             <div className='product-container'>
                 {renderProducts}
             </div>

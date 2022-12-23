@@ -15,11 +15,12 @@ function ProductCard({item}){
         <div className="product-box">
             <img src={item.img.mainImage} alt="" style={productImgStyles}/>
             <div className="info">
-                <h1>{item.name}</h1>
-                <h2>{item.price}</h2>
-                
-                <button onClick={()=>addToCart(item)}>Add to Cart</button>
-                <Link to={`/products/${item.id}`} state={{ from: "/products", data: item }}> <button>View Item</button></Link>
+                <h3>{item.name}</h3>
+                <h4> &#36; {item.price}</h4>
+                <div className="product-box-buttons">
+                    <button onClick={()=>addToCart(item)}>Add to Cart</button>
+                    <Link to={`/products/${item.id}`} state={{ from: "/products", data: item }}> <button>View Item</button></Link>
+                </div>
             </div>
             
         </div>
