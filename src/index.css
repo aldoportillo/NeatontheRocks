@@ -13,6 +13,7 @@ body{
 
 .loader{
   width: 40vw;
+  align-self: center;
 }
 
 .App{
