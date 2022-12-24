@@ -24,7 +24,7 @@ export default function Cocktails({cocktailData, loading}) {
   return (
     <div className='cocktails-page'>
             {loading ?
-            <img src={require("../assets/loading.gif")} alt=""/> :
+            <img src={require("../assets/loading.gif")} className="loader" alt=""/> :
             <div className='cocktail-list-container'>
                 {renderCocktails}
             </div>}

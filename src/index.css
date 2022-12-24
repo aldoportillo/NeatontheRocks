@@ -11,6 +11,10 @@ body{
   position: relative;
 }
 
+.loader{
+  width: 40vw;
+}
+
 .App{
   display: flex;
   flex-direction: column;
