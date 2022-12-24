@@ -4,7 +4,7 @@ import ProductCard from '../components/ProductCard'
 import { Link } from 'react-router-dom'
 
 export default function Products () {
-    const {allItems} = React.useContext(Context)
+    const {allItems, loadingProducts} = React.useContext(Context)
 
     const renderProducts = allItems.map(product => {
         return(
@@ -14,19 +14,19 @@ export default function Products () {
 
     React.useEffect(() => {
         console.log("rerender")
-       },[allItems])
+       },[loadingProducts])
 
     return (
         <div className='products-page'>
-            {allItems ?  
+            {loadingProducts ?  
+            <img src={require("../assets/loading.gif")} className="loader" alt=""/> :
             <>
             <div className='product-container'>
                 {renderProducts}
             </div>
 
             <Link to="/cart"><button className="--whiskey-btn">Go to Cart</button></Link>
-            </>
-            : <img src={require("../assets/loading.gif")} alt=""/>}
+            </>}
             
         </div>
     )

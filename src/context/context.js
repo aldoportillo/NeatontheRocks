@@ -7,6 +7,7 @@ const Context = React.createContext()
 function ContextProvider({children}) {
     const [allItems, setAllItems] = React.useState()
     const [cart, setCart] = React.useState([])
+    const [loadingProducts, setLoadingProducts] = React.useState(true)
 
     React.useEffect(() => {
         axios
@@ -14,6 +15,7 @@ function ContextProvider({children}) {
             .then(res => {
             const productData = res.data;
                 setAllItems(productData)
+                setLoadingProducts(false)
             })
     },[])
 
@@ -48,7 +50,7 @@ function ContextProvider({children}) {
 
 
     return(
-        <Context.Provider value={{allItems, toggleFavorite, addToCart, removeFromCart, cart, clearCart}}>
+        <Context.Provider value={{allItems, toggleFavorite, addToCart, removeFromCart, cart, clearCart, loadingProducts }}>
             {children}
         </Context.Provider>
     )
