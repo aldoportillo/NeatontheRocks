@@ -6,7 +6,7 @@ import { nanoid } from 'nanoid'
 import { getMacros } from '../bar/macros'
 
 
-export default function Macro ({spiritData}) {
+export default function Macro ({spiritData, loading}) {
 
     const [cocktail, setCocktail] = React.useState([])
 
@@ -16,10 +16,12 @@ export default function Macro ({spiritData}) {
 
    React.useEffect(() => {
     console.log("rerender")
-   },[spiritData])
+   },[loading])
     return (
         <>
-        {spiritData ? <div className='nutrition-page'> 
+        {loading ? 
+        <img src={require("../assets/loading.gif")} alt="" className='loader'/> :
+        <div className='nutrition-page'> 
             <div className='left-page'>
                 <div className='form'>
                 <LiquidForm setCocktail={setCocktail} cocktail={cocktail} spiritData={spiritData}/>
@@ -37,7 +39,7 @@ export default function Macro ({spiritData}) {
                <NutritionLabel item={getMacros(cocktail, spiritData)}/>
             </div> 
 
-        </div> : <img src={require("../assets/loading.gif")} alt=""/>}
+        </div>}
         </>
     )
 }
