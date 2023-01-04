@@ -8,13 +8,9 @@ export default function Products () {
 
     const renderProducts = productData?.map(product => {
         return(
-            <ProductCard key={product.id} item={product}/>
+            <ProductCard key={product._id} item={product}/>
         )
     })
-
-    React.useEffect(() => {
-        console.log("rerender")
-       },[loadingProducts])
 
     return (
         <div className='products-page'>
