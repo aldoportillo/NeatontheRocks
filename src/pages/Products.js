@@ -4,9 +4,9 @@ import ProductCard from '../components/ProductCard'
 import { Link } from 'react-router-dom'
 
 export default function Products () {
-    const {allItems, loadingProducts} = React.useContext(Context)
+    const {productData, loadingProducts} = React.useContext(Context)
 
-    const renderProducts = allItems.map(product => {
+    const renderProducts = productData?.map(product => {
         return(
             <ProductCard key={product.id} item={product}/>
         )
