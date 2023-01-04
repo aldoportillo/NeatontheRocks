@@ -14,9 +14,6 @@ export default function Macro ({spiritData, loading}) {
     return <SpecList key={nanoid()} name={item.name} ounces={item.ounces} />
    })
 
-   React.useEffect(() => {
-    console.log("rerender")
-   },[loading])
     return (
         <>
         {loading ? 

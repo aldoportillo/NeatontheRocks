@@ -16,10 +16,6 @@ export default function Cocktails({cocktailData, loading}) {
             </div>
         )
     })
-
-    React.useEffect(()=> {
-        console.log('Cocktail rerender');
-    }, [loading])
     
   return (
     <div className='cocktails-page'>
