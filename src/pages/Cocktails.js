@@ -5,7 +5,7 @@ export default function Cocktails({cocktailData, loading}) {
 
     
 
-    const renderCocktails = cocktailData.map(cocktail => {
+    const renderCocktails = cocktailData?.map(cocktail => {
         const {name, _id, image} = cocktail
         return (
             <div key={_id} className='cocktail-card'>
