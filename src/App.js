@@ -15,8 +15,10 @@ function App() {
 
   const [cocktailData, setCocktailData] = React.useState([])
   const [spiritData, setSpiritData] = React.useState([])
+  const [productData, setProductData] = React.useState([])
   const [loadingCocktails, setLoadingCocktails] = React.useState(true)
   const [loadingSpirits, setLoadingSpirits] = React.useState(true)
+  const[loadingProducts, setLoadingProducts] =React.useState(true)
 
     React.useEffect(( ) => {
         axios
@@ -33,6 +35,13 @@ function App() {
             setSpiritData(spiritData)
             setLoadingSpirits(false)
           })
+          axios
+            .get('https://neatontherocks-server.onrender.com/api/products')
+            .then(res => {
+              const productData = res.data;
+              setProductData(productData)
+              setLoadingProducts(false)
+            })
     }, [])
 
 
@@ -40,7 +49,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route exact path="/" element={<PageContainer children={<Home />}/>} />
-        <Route path="/products" element={<PageContainer children={<Products />}/>} />
+        <Route path="/products" element={<PageContainer children={<Products loading={loadingProducts} productData={productData}/>}/>} />
         <Route path="/products/:id" element={<PageContainer children={<Product />} />} />
         <Route path="/cart" element={<PageContainer children={<Cart />}/>} />
         <Route path="/macro" element={<PageContainer children={<Macro spiritData={spiritData} loading={loadingSpirits}/>}/>} />
