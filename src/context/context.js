@@ -5,7 +5,7 @@ const Context = React.createContext()
     
 
 function ContextProvider({children}) {
-    const [allItems, setAllItems] = React.useState()
+    const [productData, setProductData] = React.useState()
     const [cart, setCart] = React.useState([])
     const [loadingProducts, setLoadingProducts] = React.useState(true)
 
@@ -14,13 +14,13 @@ function ContextProvider({children}) {
             .get('https://neatontherocks-server.onrender.com/api/products')
             .then(res => {
             const productData = res.data;
-                setAllItems(productData)
+                setProductData(productData)
                 setLoadingProducts(false)
             })
     },[])
 
     function toggleFavorite(id) {
-        const updatedArr = allItems.map(item => {
+        const updatedArr = productData.map(item => {
             if (item.id === id){
                 return{
                     ...item,
@@ -29,7 +29,7 @@ function ContextProvider({children}) {
             }
             return item
         })
-        setAllItems(updatedArr)
+        setProductData(updatedArr)
     }
 
     function addToCart (obj) {
@@ -50,7 +50,7 @@ function ContextProvider({children}) {
 
 
     return(
-        <Context.Provider value={{allItems, toggleFavorite, addToCart, removeFromCart, cart, clearCart, loadingProducts }}>
+        <Context.Provider value={{productData, toggleFavorite, addToCart, removeFromCart, cart, clearCart, loadingProducts }}>
             {children}
         </Context.Provider>
     )
